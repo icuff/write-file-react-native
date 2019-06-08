@@ -11,7 +11,8 @@ export default class App extends Component {
   requestPermission() {
     try {
       const granted = PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE
+        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log('You can read external storage');
